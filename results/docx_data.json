@@ -1,0 +1,537 @@
+{
+  "env": {
+    "python": "3.12.3",
+    "scikit_learn": "1.8.0",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "platform": "Linux-6.18.44-fc-v36-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "seed": 42,
+    "dedup_rows": 5130,
+    "dedup_spam_share": 0.1226,
+    "audit_n_rows": 5574,
+    "audit_n_ham": 4827,
+    "audit_n_spam": 747,
+    "audit_spam_share": 0.134,
+    "audit_majority_class_accuracy": 0.866,
+    "audit_n_missing": 0,
+    "audit_n_exact_duplicate_rows": 403,
+    "audit_n_duplicate_texts": 403,
+    "audit_n_texts_with_conflicting_labels": 0,
+    "audit_n_near_duplicates_normalised": 444,
+    "audit_mean_chars_ham": 71.5,
+    "audit_mean_chars_spam": 138.7,
+    "audit_pct_ham_containing_digit": 0.157,
+    "audit_pct_spam_containing_digit": 0.948
+  },
+  "audit": {
+    "n_rows": 5574.0,
+    "n_ham": 4827.0,
+    "n_spam": 747.0,
+    "spam_share": 0.134,
+    "majority_class_accuracy": 0.866,
+    "n_missing": 0.0,
+    "n_exact_duplicate_rows": 403.0,
+    "n_duplicate_texts": 403.0,
+    "n_texts_with_conflicting_labels": 0.0,
+    "n_near_duplicates_normalised": 444.0,
+    "mean_chars_ham": 71.5,
+    "mean_chars_spam": 138.7,
+    "pct_ham_containing_digit": 0.157,
+    "pct_spam_containing_digit": 0.948
+  },
+  "top": "Linear SVM",
+  "second": "Logistic regression",
+  "last": "k-NN (cosine)",
+  "top_key": "LinearSVM",
+  "e1_rank": [
+    "Linear SVM",
+    "Logistic regression",
+    "Multinomial naive Bayes",
+    "Random forest",
+    "k-NN (cosine)"
+  ],
+  "e2_rank": [
+    "Logistic regression",
+    "Linear SVM",
+    "Multinomial naive Bayes",
+    "Random forest",
+    "k-NN (cosine)"
+  ],
+  "gap": 0.0026,
+  "spread_top": 0.0071,
+  "base_acc": 0.866,
+  "base_f1": 0.4641,
+  "svm_r99": 0.9237,
+  "rf_ratio": 11.5,
+  "dedup_optimism_top": 0.0057,
+  "char_gain_min": 0.0044,
+  "char_gain_max": 0.0121,
+  "char_gain_max_abs": 0.0121,
+  "n_char_better": 5,
+  "max_repr_p": 0.0054,
+  "dedup_min": 0.005,
+  "dedup_max": 0.0101,
+  "fried_e1": {
+    "stat": 39.75,
+    "p": "4.89e-08",
+    "ranks": "MultinomialNB=2.50; LogisticRegression=2.20; LinearSVM=1.67; kNN=4.80; RandomForest=3.83"
+  },
+  "fried_e2": {
+    "stat": 49.79,
+    "p": "3.99e-10"
+  },
+  "svm_v_lr": {
+    "W": "25",
+    "p": "0.0958",
+    "r": "0.51"
+  },
+  "nb_v_svm": {
+    "W": "15",
+    "p": "0.0251",
+    "r": "0.66"
+  },
+  "table3": [
+    {
+      "algorithm": "Multinomial naive Bayes",
+      "space": "alpha in 0.005, 0.01, 0.03, 0.1, 0.3, 1, 3, 10",
+      "configs": "8",
+      "modal": "alpha: 0.03"
+    },
+    {
+      "algorithm": "Logistic regression",
+      "space": "C in 0.1, 1, 10, 100 x class_weight in None, balanced",
+      "configs": "8",
+      "modal": "C: 10.0, class_weight: balanced"
+    },
+    {
+      "algorithm": "Linear SVM",
+      "space": "C in 0.01, 0.1, 1, 10 x class_weight in None, balanced",
+      "configs": "8",
+      "modal": "C: 1.0, class_weight: balanced"
+    },
+    {
+      "algorithm": "k-NN (cosine)",
+      "space": "n_neighbors in 1, 3, 5, 9 x weights in uniform, distance; cosine metric",
+      "configs": "8",
+      "modal": "n_neighbors: 5, weights: distance"
+    },
+    {
+      "algorithm": "Random forest",
+      "space": "n_estimators in 100, 200 x min_samples_leaf in 1, 3 x class_weight in None, balanced_subsample",
+      "configs": "8",
+      "modal": "class_weight: balanced_subsample, min_samples_leaf: 3, n_estimators: 100"
+    }
+  ],
+  "table4_e1": [
+    {
+      "algorithm": "Multinomial naive Bayes",
+      "family": "Linear / probabilistic",
+      "metrics": {
+        "macro_f1": {
+          "text": "0.9709 +/- 0.0072",
+          "bold": false
+        },
+        "pr_auc": {
+          "text": "0.9781 +/- 0.0085",
+          "bold": false
+        },
+        "mcc": {
+          "text": "0.9427 +/- 0.0141",
+          "bold": false
+        },
+        "recall_at_99_precision": {
+          "text": "0.9059 +/- 0.0223",
+          "bold": false
+        },
+        "balanced_accuracy": {
+          "text": "0.9576 +/- 0.0108",
+          "bold": false
+        },
+        "accuracy": {
+          "text": "0.9869 +/- 0.0032",
+          "bold": false
+        }
+      },
+      "train_s": "2.1",
+      "pred_ms": "16.3",
+      "rank": "3"
+    },
+    {
+      "algorithm": "Logistic regression",
+      "family": "Linear / probabilistic",
+      "metrics": {
+        "macro_f1": {
+          "text": "0.9719 +/- 0.0080",
+          "bold": false
+        },
+        "pr_auc": {
+          "text": "0.9815 +/- 0.0074",
+          "bold": false
+        },
+        "mcc": {
+          "text": "0.9443 +/- 0.0159",
+          "bold": false
+        },
+        "recall_at_99_precision": {
+          "text": "0.9184 +/- 0.0269",
+          "bold": false
+        },
+        "balanced_accuracy": {
+          "text": "0.9649 +/- 0.0116",
+          "bold": false
+        },
+        "accuracy": {
+          "text": "0.9871 +/- 0.0037",
+          "bold": false
+        }
+      },
+      "train_s": "2.3",
+      "pred_ms": "15.6",
+      "rank": "2"
+    },
+    {
+      "algorithm": "Linear SVM",
+      "family": "Kernel (linear)",
+      "metrics": {
+        "macro_f1": {
+          "text": "0.9745 +/- 0.0071",
+          "bold": true
+        },
+        "pr_auc": {
+          "text": "0.9820 +/- 0.0074",
+          "bold": true
+        },
+        "mcc": {
+          "text": "0.9495 +/- 0.0141",
+          "bold": true
+        },
+        "recall_at_99_precision": {
+          "text": "0.9237 +/- 0.0253",
+          "bold": true
+        },
+        "balanced_accuracy": {
+          "text": "0.9663 +/- 0.0111",
+          "bold": true
+        },
+        "accuracy": {
+          "text": "0.9884 +/- 0.0032",
+          "bold": true
+        }
+      },
+      "train_s": "2.4",
+      "pred_ms": "15.9",
+      "rank": "1"
+    },
+    {
+      "algorithm": "k-NN (cosine)",
+      "family": "Instance-based",
+      "metrics": {
+        "macro_f1": {
+          "text": "0.9548 +/- 0.0091",
+          "bold": false
+        },
+        "pr_auc": {
+          "text": "0.9478 +/- 0.0154",
+          "bold": false
+        },
+        "mcc": {
+          "text": "0.9123 +/- 0.0169",
+          "bold": false
+        },
+        "recall_at_99_precision": {
+          "text": "0.8626 +/- 0.0462",
+          "bold": false
+        },
+        "balanced_accuracy": {
+          "text": "0.9316 +/- 0.0144",
+          "bold": false
+        },
+        "accuracy": {
+          "text": "0.9801 +/- 0.0037",
+          "bold": false
+        }
+      },
+      "train_s": "3.3",
+      "pred_ms": "62.9",
+      "rank": "5"
+    },
+    {
+      "algorithm": "Random forest",
+      "family": "Ensemble",
+      "metrics": {
+        "macro_f1": {
+          "text": "0.9632 +/- 0.0090",
+          "bold": false
+        },
+        "pr_auc": {
+          "text": "0.9764 +/- 0.0088",
+          "bold": false
+        },
+        "mcc": {
+          "text": "0.9273 +/- 0.0176",
+          "bold": false
+        },
+        "recall_at_99_precision": {
+          "text": "0.8564 +/- 0.0505",
+          "bold": false
+        },
+        "balanced_accuracy": {
+          "text": "0.9510 +/- 0.0139",
+          "bold": false
+        },
+        "accuracy": {
+          "text": "0.9834 +/- 0.0039",
+          "bold": false
+        }
+      },
+      "train_s": "27.8",
+      "pred_ms": "45.0",
+      "rank": "4"
+    },
+    {
+      "algorithm": "Majority baseline (all-ham)",
+      "family": "Baseline",
+      "metrics": {
+        "macro_f1": {
+          "text": "0.4641 +/- 0.0001",
+          "bold": false
+        },
+        "pr_auc": {
+          "text": "0.1340 +/- 0.0004",
+          "bold": false
+        },
+        "mcc": {
+          "text": "0.0000 +/- 0.0000",
+          "bold": false
+        },
+        "recall_at_99_precision": {
+          "text": "0.0000 +/- 0.0000",
+          "bold": false
+        },
+        "balanced_accuracy": {
+          "text": "0.5000 +/- 0.0000",
+          "bold": false
+        },
+        "accuracy": {
+          "text": "0.8660 +/- 0.0004",
+          "bold": false
+        }
+      },
+      "train_s": "0.0",
+      "pred_ms": "0.0",
+      "rank": "-"
+    }
+  ],
+  "table5": [
+    {
+      "experiment": "E1",
+      "comparison": "Friedman (all 5 algorithms)",
+      "test": "Friedman",
+      "statistic": "39.75",
+      "p_raw": "4.89e-08",
+      "p_adjusted": "4.89e-08",
+      "effect_size": "-",
+      "interpretation": "MultinomialNB=2.50; LogisticRegression=2.20; LinearSVM=1.67; kNN=4.80; RandomForest=3.83"
+    },
+    {
+      "experiment": "E1",
+      "comparison": "MultinomialNB vs LogisticRegression",
+      "test": "Wilcoxon signed-rank",
+      "statistic": "49.00",
+      "p_raw": "0.561",
+      "p_adjusted": "0.561",
+      "effect_size": "r = 0.16",
+      "interpretation": "within fold-to-fold noise"
+    },
+    {
+      "experiment": "E1",
+      "comparison": "MultinomialNB vs LinearSVM",
+      "test": "Wilcoxon signed-rank",
+      "statistic": "15.00",
+      "p_raw": "0.00836",
+      "p_adjusted": "0.0251",
+      "effect_size": "r = 0.66",
+      "interpretation": "reliable, large effect"
+    },
+    {
+      "experiment": "E1",
+      "comparison": "MultinomialNB vs kNN",
+      "test": "Wilcoxon signed-rank",
+      "statistic": "0.00",
+      "p_raw": "6.1e-05",
+      "p_adjusted": "0.00061",
+      "effect_size": "r = 0.88",
+      "interpretation": "reliable, large effect"
+    },
+    {
+      "experiment": "E1",
+      "comparison": "MultinomialNB vs RandomForest",
+      "test": "Wilcoxon signed-rank",
+      "statistic": "5.00",
+      "p_raw": "0.00122",
+      "p_adjusted": "0.00696",
+      "effect_size": "r = 0.80",
+      "interpretation": "reliable, large effect"
+    },
+    {
+      "experiment": "E1",
+      "comparison": "LogisticRegression vs LinearSVM",
+      "test": "Wilcoxon signed-rank",
+      "statistic": "25.00",
+      "p_raw": "0.0479",
+      "p_adjusted": "0.0958",
+      "effect_size": "r = 0.51",
+      "interpretation": "within fold-to-fold noise"
+    },
+    {
+      "experiment": "E1",
+      "comparison": "LogisticRegression vs kNN",
+      "test": "Wilcoxon signed-rank",
+      "statistic": "0.00",
+      "p_raw": "6.1e-05",
+      "p_adjusted": "0.00061",
+      "effect_size": "r = 0.88",
+      "interpretation": "reliable, large effect"
+    },
+    {
+      "experiment": "E1",
+      "comparison": "LogisticRegression vs RandomForest",
+      "test": "Wilcoxon signed-rank",
+      "statistic": "7.00",
+      "p_raw": "0.00116",
+      "p_adjusted": "0.00696",
+      "effect_size": "r = 0.78",
+      "interpretation": "reliable, large effect"
+    },
+    {
+      "experiment": "E1",
+      "comparison": "LinearSVM vs kNN",
+      "test": "Wilcoxon signed-rank",
+      "statistic": "0.00",
+      "p_raw": "6.1e-05",
+      "p_adjusted": "0.00061",
+      "effect_size": "r = 0.88",
+      "interpretation": "reliable, large effect"
+    },
+    {
+      "experiment": "E1",
+      "comparison": "LinearSVM vs RandomForest",
+      "test": "Wilcoxon signed-rank",
+      "statistic": "0.00",
+      "p_raw": "6.1e-05",
+      "p_adjusted": "0.00061",
+      "effect_size": "r = 0.88",
+      "interpretation": "reliable, large effect"
+    },
+    {
+      "experiment": "E1",
+      "comparison": "kNN vs RandomForest",
+      "test": "Wilcoxon signed-rank",
+      "statistic": "13.00",
+      "p_raw": "0.00537",
+      "p_adjusted": "0.0215",
+      "effect_size": "r = 0.69",
+      "interpretation": "reliable, large effect"
+    }
+  ],
+  "table6": [
+    {
+      "algorithm": "Multinomial naive Bayes",
+      "word": "0.9709 +/- 0.0072",
+      "char": "0.9753 +/- 0.0080",
+      "diff": "-0.0044",
+      "p": "0.00537",
+      "effect": "0.69",
+      "train": "2.1 / 10.1"
+    },
+    {
+      "algorithm": "Logistic regression",
+      "word": "0.9719 +/- 0.0080",
+      "char": "0.9840 +/- 0.0059",
+      "diff": "-0.0121",
+      "p": "0.000122",
+      "effect": "0.86",
+      "train": "2.3 / 11.6"
+    },
+    {
+      "algorithm": "Linear SVM",
+      "word": "0.9745 +/- 0.0071",
+      "char": "0.9833 +/- 0.0070",
+      "diff": "-0.0088",
+      "p": "6.1e-05",
+      "effect": "0.88",
+      "train": "2.4 / 11.3"
+    },
+    {
+      "algorithm": "k-NN (cosine)",
+      "word": "0.9548 +/- 0.0091",
+      "char": "0.9624 +/- 0.0102",
+      "diff": "-0.0076",
+      "p": "0.000305",
+      "effect": "0.84",
+      "train": "3.3 / 13.8"
+    },
+    {
+      "algorithm": "Random forest",
+      "word": "0.9632 +/- 0.0090",
+      "char": "0.9734 +/- 0.0095",
+      "diff": "-0.0102",
+      "p": "0.00427",
+      "effect": "0.70",
+      "train": "27.8 / 47.8"
+    }
+  ],
+  "table7": [
+    {
+      "algorithm": "Multinomial naive Bayes",
+      "full": "0.9709 +/- 0.0072",
+      "dedup": "0.9646 +/- 0.0098",
+      "optimism": "+0.0063",
+      "pr_full": "0.9781",
+      "pr_dedup": "0.9717"
+    },
+    {
+      "algorithm": "Logistic regression",
+      "full": "0.9719 +/- 0.0080",
+      "dedup": "0.9669 +/- 0.0075",
+      "optimism": "+0.0050",
+      "pr_full": "0.9815",
+      "pr_dedup": "0.9759"
+    },
+    {
+      "algorithm": "Linear SVM",
+      "full": "0.9745 +/- 0.0071",
+      "dedup": "0.9689 +/- 0.0065",
+      "optimism": "+0.0057",
+      "pr_full": "0.9820",
+      "pr_dedup": "0.9772"
+    },
+    {
+      "algorithm": "k-NN (cosine)",
+      "full": "0.9548 +/- 0.0091",
+      "dedup": "0.9447 +/- 0.0132",
+      "optimism": "+0.0101",
+      "pr_full": "0.9478",
+      "pr_dedup": "0.9330"
+    },
+    {
+      "algorithm": "Random forest",
+      "full": "0.9632 +/- 0.0090",
+      "dedup": "0.9560 +/- 0.0098",
+      "optimism": "+0.0073",
+      "pr_full": "0.9764",
+      "pr_dedup": "0.9704"
+    },
+    {
+      "algorithm": "Majority baseline (all-ham)",
+      "full": "0.4641 +/- 0.0001",
+      "dedup": "0.4673 +/- 0.0001",
+      "optimism": "-0.0033",
+      "pr_full": "0.1340",
+      "pr_dedup": "0.1226"
+    }
+  ],
+  "rf_recall99_sd": 0.0505,
+  "knn_recall99_sd": 0.0462
+}

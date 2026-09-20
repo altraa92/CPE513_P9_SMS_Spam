@@ -1,0 +1,15 @@
+quantity,value
+n_rows,5574.0
+n_ham,4827.0
+n_spam,747.0
+spam_share,0.134
+majority_class_accuracy,0.866
+n_missing,0.0
+n_exact_duplicate_rows,403.0
+n_duplicate_texts,403.0
+n_texts_with_conflicting_labels,0.0
+n_near_duplicates_normalised,444.0
+mean_chars_ham,71.5
+mean_chars_spam,138.7
+pct_ham_containing_digit,0.157
+pct_spam_containing_digit,0.948

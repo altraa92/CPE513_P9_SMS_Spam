@@ -1,0 +1,39 @@
+experiment,comparison,test,statistic,p_raw,correction,p_adjusted,effect_size,effect_type,interpretation
+E1,Friedman (all 5 algorithms),Friedman,39.746,4.89e-08,none,4.89e-08,,mean ranks,MultinomialNB=2.50; LogisticRegression=2.20; LinearSVM=1.67; kNN=4.80; RandomForest=3.83
+E1,MultinomialNB vs LogisticRegression,Wilcoxon signed-rank,49.0,0.561,Holm (10 pairs),0.561,0.161,r = |Z|/sqrt(N),within fold-to-fold noise
+E1,MultinomialNB vs LinearSVM,Wilcoxon signed-rank,15.0,0.00836,Holm (10 pairs),0.0251,0.66,r = |Z|/sqrt(N),"reliable, large effect"
+E1,MultinomialNB vs kNN,Wilcoxon signed-rank,0.0,6.1e-05,Holm (10 pairs),0.00061,0.88,r = |Z|/sqrt(N),"reliable, large effect"
+E1,MultinomialNB vs RandomForest,Wilcoxon signed-rank,5.0,0.00122,Holm (10 pairs),0.00696,0.797,r = |Z|/sqrt(N),"reliable, large effect"
+E1,LogisticRegression vs LinearSVM,Wilcoxon signed-rank,25.0,0.0479,Holm (10 pairs),0.0958,0.513,r = |Z|/sqrt(N),within fold-to-fold noise
+E1,LogisticRegression vs kNN,Wilcoxon signed-rank,0.0,6.1e-05,Holm (10 pairs),0.00061,0.88,r = |Z|/sqrt(N),"reliable, large effect"
+E1,LogisticRegression vs RandomForest,Wilcoxon signed-rank,7.0,0.00116,Holm (10 pairs),0.00696,0.777,r = |Z|/sqrt(N),"reliable, large effect"
+E1,LinearSVM vs kNN,Wilcoxon signed-rank,0.0,6.1e-05,Holm (10 pairs),0.00061,0.88,r = |Z|/sqrt(N),"reliable, large effect"
+E1,LinearSVM vs RandomForest,Wilcoxon signed-rank,0.0,6.1e-05,Holm (10 pairs),0.00061,0.88,r = |Z|/sqrt(N),"reliable, large effect"
+E1,kNN vs RandomForest,Wilcoxon signed-rank,13.0,0.00537,Holm (10 pairs),0.0215,0.689,r = |Z|/sqrt(N),"reliable, large effect"
+E2,Friedman (all 5 algorithms),Friedman,49.791,3.99e-10,none,3.99e-10,,mean ranks,MultinomialNB=3.27; LogisticRegression=1.47; LinearSVM=1.73; kNN=4.97; RandomForest=3.57
+E2,MultinomialNB vs LogisticRegression,Wilcoxon signed-rank,0.0,6.1e-05,Holm (10 pairs),0.00061,0.88,r = |Z|/sqrt(N),"reliable, large effect"
+E2,MultinomialNB vs LinearSVM,Wilcoxon signed-rank,1.0,0.000122,Holm (10 pairs),0.000732,0.865,r = |Z|/sqrt(N),"reliable, large effect"
+E2,MultinomialNB vs kNN,Wilcoxon signed-rank,0.0,6.1e-05,Holm (10 pairs),0.00061,0.88,r = |Z|/sqrt(N),"reliable, large effect"
+E2,MultinomialNB vs RandomForest,Wilcoxon signed-rank,33.0,0.135,Holm (10 pairs),0.271,0.396,r = |Z|/sqrt(N),within fold-to-fold noise
+E2,LogisticRegression vs LinearSVM,Wilcoxon signed-rank,24.0,0.142,Holm (10 pairs),0.271,0.417,r = |Z|/sqrt(N),within fold-to-fold noise
+E2,LogisticRegression vs kNN,Wilcoxon signed-rank,0.0,6.1e-05,Holm (10 pairs),0.00061,0.88,r = |Z|/sqrt(N),"reliable, large effect"
+E2,LogisticRegression vs RandomForest,Wilcoxon signed-rank,2.0,0.000183,Holm (10 pairs),0.000732,0.851,r = |Z|/sqrt(N),"reliable, large effect"
+E2,LinearSVM vs kNN,Wilcoxon signed-rank,0.0,6.1e-05,Holm (10 pairs),0.00061,0.88,r = |Z|/sqrt(N),"reliable, large effect"
+E2,LinearSVM vs RandomForest,Wilcoxon signed-rank,1.0,0.000122,Holm (10 pairs),0.000732,0.865,r = |Z|/sqrt(N),"reliable, large effect"
+E2,kNN vs RandomForest,Wilcoxon signed-rank,0.0,0.000122,Holm (10 pairs),0.000732,0.881,r = |Z|/sqrt(N),"reliable, large effect"
+E3,Friedman (all 5 algorithms),Friedman,46.89,1.61e-09,none,1.61e-09,,mean ranks,MultinomialNB=2.63; LogisticRegression=1.90; LinearSVM=1.60; kNN=4.87; RandomForest=4.00
+E3,MultinomialNB vs LogisticRegression,Wilcoxon signed-rank,35.0,0.296,Holm (10 pairs),0.296,0.294,r = |Z|/sqrt(N),within fold-to-fold noise
+E3,MultinomialNB vs LinearSVM,Wilcoxon signed-rank,20.0,0.0215,Holm (10 pairs),0.0646,0.587,r = |Z|/sqrt(N),within fold-to-fold noise
+E3,MultinomialNB vs kNN,Wilcoxon signed-rank,0.0,6.1e-05,Holm (10 pairs),0.00061,0.88,r = |Z|/sqrt(N),"reliable, large effect"
+E3,MultinomialNB vs RandomForest,Wilcoxon signed-rank,8.0,0.00153,Holm (10 pairs),0.0061,0.763,r = |Z|/sqrt(N),"reliable, large effect"
+E3,LogisticRegression vs LinearSVM,Wilcoxon signed-rank,29.0,0.0833,Holm (10 pairs),0.167,0.455,r = |Z|/sqrt(N),within fold-to-fold noise
+E3,LogisticRegression vs kNN,Wilcoxon signed-rank,0.0,6.1e-05,Holm (10 pairs),0.00061,0.88,r = |Z|/sqrt(N),"reliable, large effect"
+E3,LogisticRegression vs RandomForest,Wilcoxon signed-rank,0.0,6.1e-05,Holm (10 pairs),0.00061,0.88,r = |Z|/sqrt(N),"reliable, large effect"
+E3,LinearSVM vs kNN,Wilcoxon signed-rank,0.0,6.1e-05,Holm (10 pairs),0.00061,0.88,r = |Z|/sqrt(N),"reliable, large effect"
+E3,LinearSVM vs RandomForest,Wilcoxon signed-rank,0.0,6.1e-05,Holm (10 pairs),0.00061,0.88,r = |Z|/sqrt(N),"reliable, large effect"
+E3,kNN vs RandomForest,Wilcoxon signed-rank,7.0,0.00116,Holm (10 pairs),0.0058,0.777,r = |Z|/sqrt(N),"reliable, large effect"
+E1 vs E2,MultinomialNB: word vs char,Wilcoxon signed-rank,13.0,0.00537,"none (pre-specified, 5 tests)",0.00537,0.689,r = |Z|/sqrt(N),"mean diff (word - char) = -0.0044; reliable, large effect"
+E1 vs E2,LogisticRegression: word vs char,Wilcoxon signed-rank,1.0,0.000122,"none (pre-specified, 5 tests)",0.000122,0.865,r = |Z|/sqrt(N),"mean diff (word - char) = -0.0121; reliable, large effect"
+E1 vs E2,LinearSVM: word vs char,Wilcoxon signed-rank,0.0,6.1e-05,"none (pre-specified, 5 tests)",6.1e-05,0.88,r = |Z|/sqrt(N),"mean diff (word - char) = -0.0088; reliable, large effect"
+E1 vs E2,kNN: word vs char,Wilcoxon signed-rank,3.0,0.000305,"none (pre-specified, 5 tests)",0.000305,0.836,r = |Z|/sqrt(N),"mean diff (word - char) = -0.0076; reliable, large effect"
+E1 vs E2,RandomForest: word vs char,Wilcoxon signed-rank,12.0,0.00427,"none (pre-specified, 5 tests)",0.00427,0.704,r = |Z|/sqrt(N),"mean diff (word - char) = -0.0102; reliable, large effect"
